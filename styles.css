@@ -1,0 +1,125 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e9ecef;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0062cc;
+    padding: 12px 24px;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.nav-links a:hover {
+    color: #cce5ff;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    width: 26px;
+    background-color: #ffffff;
+    border-radius: 6px;
+}
+
+#toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #0062cc;
+    }
+
+    .nav-links li {
+        padding: 12px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.3em;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    #toggle:checked + .hamburger + .nav-links {
+        display: flex;
+    }
+}
+
+.form-container, .login-container, .data-container, .announcement-container, .message-container {
+    max-width: 520px;
+    margin: 60px auto;
+    padding: 22px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 22px;
+    border: 1px solid #b3b3b3;
+    border-radius: 6px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0062cc;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.message-list, .data-list, .announcement-list {
+    margin-top: 24px;
+}
